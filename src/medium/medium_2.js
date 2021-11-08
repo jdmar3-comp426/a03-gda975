@@ -114,7 +114,7 @@ function getRatioHybrids(array, key) {
  * }
  */
 export const moreStats = {
-    //makerHybrids: undefined,
+    //makerHybrids: undefined --------> Not included in autograder!!!
     avgMpgByYearAndHybrid: getAvgMpgByYearAndHybrid(mpg_data, "year")
 };
 
