@@ -18,7 +18,7 @@ queries.
  *
  */
 export function searchHighPower(car_data, minHorsepower, minTorque) {
-    for (let i = 0; i < car_data.length; i++) {
+    for (let i = car_data.length - 1; i >= 0; i--) {
         if (car_data[i].horsepower < minHorsepower || car_data[i].torque < minTorque) {
             car_data.splice(i, 1);
         }
