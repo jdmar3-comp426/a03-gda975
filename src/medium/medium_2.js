@@ -217,8 +217,10 @@ function getAvgMpgByYearAndHybrid(array, key) {
     for (let i = 0; i < 4; i++) {
         temp[2009 + i].hybrid.city = temp[2009 + i].hybrid.city / temp[2009 + i].hybrid.counter;
         temp[2009 + i].hybrid.highway = temp[2009 + i].hybrid.highway / temp[2009 + i].hybrid.counter;
+        delete temp[2009 + i].hybrid.counter;
         temp[2009 + i].notHybrid.city = temp[2009 + i].hybrid.city / temp[2009 + i].hybrid.counter;
         temp[2009 + i].notHybrid.highway = temp[2009 + i].hybrid.highway / temp[2009 + i].hybrid.counter;
+        delete temp[2009 + i].notHybrid.counter;
     }
     return temp;
 }
