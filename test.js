@@ -1,5 +1,4 @@
 import mpg_data from "./src/medium/data/mpg_data.js";
-import {searchByYear} from "./src/medium/medium_3.js";
+import {repeat} from "./src/spicy/spicy_9.js";
 
-console.log(mpg_data.length); 
-console.log(searchByYear(mpg_data, [2009]).length); 
+repeat(console.log, 10, "Hello World");
