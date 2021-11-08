@@ -94,5 +94,12 @@ export function searchByYear(car_data, years) {
             }
         }
     }
+    array.sort((a, b) => {
+        if (a.year >= b.year) {
+            return 1;
+        } else {
+            return -1;
+        }
+    })
     return array;
 }
