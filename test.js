@@ -1,4 +1,4 @@
 import mpg_data from "./src/medium/data/mpg_data.js";
-import {repeat, repeatDemo, tenTimesFifty} from "./src/spicy/spicy_9.js";
+import {allEvensAreOdd, repeat, repeatDemo, tenTimesFifty} from "./src/spicy/spicy_9.js";
 
-console.log(tenTimesFifty());
+console.log(allEvensAreOdd([1, 0, 1, 0]));
