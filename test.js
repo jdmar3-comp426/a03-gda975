@@ -1,5 +1,5 @@
 // Testing identifyArray
-import {removeKey} from "./src/mild/mild_2.js";
+import {removeKeyNonDestructive} from "./src/mild/mild_2.js";
 let obj = {
     name: 'Mr. Boss',
     title: 'boss',
@@ -7,5 +7,5 @@ let obj = {
     password: 'pass123'
 };
 console.log(obj);
-removeKey(obj, 'password');
-console.log(obj);
+let x = removeKeyNonDestructive(obj, 'password');
+console.log(x);
