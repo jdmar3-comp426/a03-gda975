@@ -20,10 +20,39 @@ see under the methods section
  * @param {allCarStats.ratioHybrids} ratio of cars that are hybrids
  */
 export const allCarStats = {
-    avgMpg: undefined,
-    allYearStats: undefined,
-    ratioHybrids: undefined,
+    avgMpg: {
+        city: getAverageMPG(mpg_data, "city_mpg"),
+        highway: getAverageMPG(mpg_data, "highway_mpg")
+    },
+    allYearStats: getStatisticsOfKey(mpg_data, "year"),
+    ratioHybrids: getRatioHybrids(mpg_data, "hybrid"),
 };
+
+function getAverageMPG(array, key) {
+    let sum = 0;
+    array.forEach(element => {
+        sum += element[key]
+    });
+    return sum / array.length;
+}
+
+function getStatisticsOfKey(array, key) {
+    let temp = [];
+    array.forEach(element => {
+        temp.push(element[key]);
+    });
+    return getStatistics(temp);
+}
+
+function getRatioHybrids(array, key) {
+    let counter = 0;
+    array.forEach(element => {
+        if (element[key] == true) {
+            counter++;
+        }
+    });
+    return counter / array.length;
+}
 
 
 /**
