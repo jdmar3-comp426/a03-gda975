@@ -58,7 +58,6 @@ export function searchMpg(car_data, minCity, minHighway) {
         }
     })
     return car_data;
-
 }
 
 
@@ -72,7 +71,7 @@ export function searchMpg(car_data, minCity, minHighway) {
  */
 export function searchName(car_data, searchTerm) {
     car_data = car_data.filter(function (term) {
-        return term.id === searchTerm;
+        return term.id.toLowerCase() === searchTerm.toLowerCase();
     });
     return car_data;
 }
@@ -87,5 +86,13 @@ export function searchName(car_data, searchTerm) {
  * @returns {[]} an array of car objects
  */
 export function searchByYear(car_data, years) {
-
+    let array = [];
+    for (let i = car_data.length - 1; i >= 0; i--) {
+        for (let j = 0; j < years.length; j++) {
+            if (car_data[i].year == years[j]) {
+                array.push(car_data[i]);
+            }
+        }
+    }
+    return array;
 }
