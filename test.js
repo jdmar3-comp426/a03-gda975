@@ -1,11 +1,4 @@
-// Testing identifyArray
-import {removeKeys} from "./src/mild/mild_2.js";
-let obj = {
-    name: 'Mr. Boss',
-    title: 'boss',
-    age: 33,
-    password: 'pass123'
-};
-let x = removeKeys(obj, ['password', 'age']);
-console.log(obj);
-console.log(x);
+// Testing getMedian
+import {getMedian} from "./src/medium/medium_1.js";
+let array = [3,2,5,6,2,7,4,2,7,5];
+console.log(getMedian(array)); // 4.5 
