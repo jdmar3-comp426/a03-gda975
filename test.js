@@ -1,4 +1,4 @@
 import mpg_data from "./src/medium/data/mpg_data.js";
-import {allEvensAreOdd, repeat, repeatDemo, tenTimesFifty} from "./src/spicy/spicy_9.js";
+import { searchName } from "./src/medium/medium_3.js";
 
-console.log(allEvensAreOdd([1, 0, 1, 0]));
+console.log(searchName(mpg_data, "2012 kia soul at"));

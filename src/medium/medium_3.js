@@ -71,8 +71,16 @@ export function searchMpg(car_data, minCity, minHighway) {
  */
 export function searchName(car_data, searchTerm) {
     car_data = car_data.filter(function (term) {
-        return term.id.toLowerCase() === searchTerm.toLowerCase();
+        return term.id.toLowerCase().includes((searchTerm.toLowerCase()));
     });
+    
+    car_data.sort((a, b) => {
+        if (a.id >= b.id) {
+            return 1;
+        } else {
+            return -1;
+        }
+    })
     return car_data;
 }
 
